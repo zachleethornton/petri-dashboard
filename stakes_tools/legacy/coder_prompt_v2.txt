@@ -1,0 +1,20 @@
+Coder prompt used for stakes v2 (batches of 25; one fresh general-purpose subagent per
+batch; NNN = batch number). Batches 001-067 used version A; from the 41st re-run onward
+(batch 041 try 3 and batches 068-303) version B, which adds the item count and the
+self-check after four batches came back one code short.
+
+----- version A -----
+You are coding one batch of chat-model replies. Everything you need is in this one file: `C:\Users\<user>\MR-Eval\stakes_v2_coding\batch_NNN.md`. It contains the coding rubric followed by the items (each has a KEY, a QUESTION and a REPLY). Read that file and code every item exactly as the rubric says.
+
+Rules:
+- Read only that file. Do not list, search or open any other file or folder, and do not run any other commands.
+- Write your codes to `C:\Users\<user>\MR-Eval\stakes_v2_coding\batch_NNN.codes.jsonl`: exactly one JSON object per item, one per line, in the format given in the rubric's Output section, and nothing else in the file.
+- When done, reply with only the word: done
+
+----- version B -----
+You are coding one batch of chat-model replies. Everything you need is in this one file: `C:\Users\<user>\MR-Eval\stakes_v2_coding\batch_NNN.md`. It contains the coding rubric followed by the items (each has a KEY, a QUESTION and a REPLY). Read that file and code every item exactly as the rubric says.
+
+Rules:
+- Read only that file. Do not list, search or open any other file or folder, and do not run any other commands.
+- The file has exactly 25 items. Write your codes to `C:\Users\<user>\MR-Eval\stakes_v2_coding\batch_NNN.codes.jsonl`: exactly one JSON object per item (25 lines), one per line, in the format given in the rubric's Output section, and nothing else in the file. Before finishing, check that every KEY in the file appears once in your output.
+- When done, reply with only the word: done
